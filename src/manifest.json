@@ -10,7 +10,6 @@
     "http://*/*",
     "https://*/*",
     "storage",
-    "webRequest",
     "tabs",
     "<all_urls>"
   ],
