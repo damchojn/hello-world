@@ -1,5 +1,45 @@
-# Rally Issue Helper
+# Rally Copy Helper
 
-TODO: Docs
-Icon from:
-<div>Icons made by <a href="http://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+Productivity utility that aims to solve common issue with Rally interface.
+
+---
+
+![](src/images/bg-640x230.png)
+
+---
+
+## Functionality
+
+- Adding keyboard shortcut to open email with [user story, defect or task] details already copied into body
+
+## Roadmap
+
+- Cleanup after hackathon
+- Copying to formatted link to clipboard with single keystroke
+- Popup with help info
+
+---
+
+## Setup
+
+```bash
+npm install
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Pack before publish
+
+```bash
+npm run build
+```
+
+- Zip archive is used to upload new version to Chrome Store.
+
+## Credits
+
+Icons made by [Gregor Cresnar](http://www.flaticon.com/authors/gregor-cresnar) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
