@@ -4,11 +4,13 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "icons": {
-    "128": "icon_128.png"
+    "128": "images/icon_128.png"
   },
   "background": {
-    "persistent": false,
-    "page": "background.html"
+    "persistent": true,
+    "scripts": [
+      "scripts/background.js"
+    ]
   },
   "permissions": [
     "http://*/*",
@@ -17,32 +19,13 @@
     "tabs",
     "<all_urls>"
   ],
-  "web_accessible_resources": [
-    "background.js",
-    "jquery-2.1.4.min.js"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "https://rally1.rallydev.com/*"
-      ],
-      "js": [
-        "jquery-2.1.4.min.js",
-        "visible.min.js",
-        "foreground.js"
-      ],
-      "css": [
-        "styles.css"
-      ]
-    }
-  ],
   "commands": {
-    "copy-title": {
+    "copy-to-email": {
       "suggested_key": {
-        "default": "Ctrl+Shift+P",
-        "mac": "Command+Shift+P"
+        "default": "Ctrl+Shift+Y",
+        "mac": "Command+Shift+Y"
       },
-      "description": "Select FormattedID on the page"
+      "description": "Copy issue to Email"
     }
   }
 }
