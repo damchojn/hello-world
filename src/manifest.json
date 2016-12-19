@@ -1,6 +1,6 @@
 {
   "name": "Rally Copy Helper",
-  "short_name": "Rally Copy Helper",
+  "short_name": "Rally Helper",
   "version": "0.0.1",
   "manifest_version": 2,
   "icons": {
@@ -18,6 +18,20 @@
     "storage",
     "tabs",
     "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://rally1.rallydev.com/*"
+      ],
+      "js": [
+        "scripts/content.js"
+      ],
+      "css": [
+        "styles/content.css"
+      ],
+			"run_at": "document_end"
+    }
   ],
   "commands": {
     "copy-to-email": {
