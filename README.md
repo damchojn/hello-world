@@ -10,12 +10,11 @@ Productivity utility that aims to solve common issue with Rally interface.
 
 ## Functionality
 
-- Adding keyboard shortcut to open email with [user story, defect or task] details already copied into body
+- Adding keyboard shortcut to open email with [user story, defect or task] details already copied into body (`Ctrl`+`Shift`+`Y`)
+- Copying formatted link to clipboard with single keystroke (`Y`)
 
-## Roadmap
+## Todo
 
-- Cleanup after hackathon
-- Copying to formatted link to clipboard with single keystroke
 - Popup with help info
 
 ---

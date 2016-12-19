@@ -1,0 +1,12 @@
+#toast-container > div {
+    opacity: 1;
+    border-radius: 0;
+    top: 5px;
+    box-shadow: none;
+    font-size: 13px;
+    border: 1px solid #fff;
+}
+
+#toast-container.toast-top-center > div {
+    width: 400px;
+}
