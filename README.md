@@ -41,4 +41,4 @@ npm run build
 
 ## Credits
 
-Icons made by [Gregor Cresnar](http://www.flaticon.com/authors/gregor-cresnar) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+Icons made by [Freepik](http://www.freepik.com) from [Flaticon](http://www.flaticon.com) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
