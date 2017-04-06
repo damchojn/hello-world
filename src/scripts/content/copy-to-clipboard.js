@@ -16,9 +16,15 @@ $(() => {
                 Url: window.location.href
             };
 
+            let getTitle = () => {
+                let input = document.querySelectorAll('input.simpleTextDetailField')[0];
+                let h1 = document.querySelectorAll('h1.detailField-name')[0];
+                return input ? input.value : h1.innerText.trim();
+            }
+
             let currentIssuePrefix = currentIssue.Id.slice(0, 2);
             currentIssue.Type = issueTypes.filter((type) => type.prefix === currentIssuePrefix)[0];
-            currentIssue.Title = document.querySelectorAll('input.simpleTextDetailField')[0].value;
+            currentIssue.Title = getTitle();
 
             resolve(currentIssue);
         });
