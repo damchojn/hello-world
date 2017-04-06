@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     case 'copy-to-clipboard': {
       let { Url, Title, Id } = message.data;
       clipboard.copy({
-        html: `<a href='${Url}'>${Id}</a>: <em>${Title}</em>`,
+        html: `<a href='${Url}'>${Id}</a>: <em>${Title}</em><br><p></p>`,
         text: `${Id}: ${Title}`
       });
       sendResponse({isSuccess: true});
