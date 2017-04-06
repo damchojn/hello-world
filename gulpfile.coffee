@@ -1,5 +1,6 @@
 gulp = require 'gulp'
 concat = require 'gulp-concat'
+pug = require 'gulp-pug'
 
 gulp.task 'clean', ->
     require('del') ['dist', 'bin']
@@ -29,11 +30,25 @@ gulp.task 'build:content:css', ->
 gulp.task 'build:background', ->
     gulp.src([
             'node_modules/jquery/dist/jquery.min.js'
+            'src/scripts/shared/storage.js'
             'src/scripts/background/clipboard.js'
             'src/scripts/background/background.js'
         ])
         .pipe concat 'background.js'
         .pipe gulp.dest 'dist/scripts'
+
+gulp.task 'build:options:js', ->
+    gulp.src([
+            'src/scripts/shared/storage.js'
+            'src/options/*.js'
+        ])
+        .pipe concat 'options.js'
+        .pipe gulp.dest 'dist/scripts'
+
+gulp.task 'build:options:page', ->
+    gulp.src('src/options/options.pug')
+        .pipe pug()
+        .pipe gulp.dest 'dist/options'
 
 gulp.task 'copy:manifest', ->
     gulp.src 'src/manifest.json'
@@ -46,6 +61,8 @@ gulp.task 'copy:images', ->
 gulp.task 'build', [
     'build:content:js'
     'build:content:css'
+    'build:options:js'
+    'build:options:page'
     'build:background'
     'copy:scripts'
     'copy:manifest'
@@ -53,9 +70,12 @@ gulp.task 'build', [
 ]
 
 gulp.task 'watch', ->
+    gulp.watch 'src/shared/*.js',             ['build:background', 'build:options:js']
     gulp.watch 'src/scripts/background/*.js', ['build:background']
     gulp.watch 'src/scripts/content/*.js',    ['build:content:js']
     gulp.watch 'src/scripts/content/*.css',   ['build:content:css']
+    gulp.watch 'src/options/*.js',            ['build:options:js']
+    gulp.watch 'src/options/options.pug',     ['build:options:page']
     gulp.watch 'src/scripts/*.js',            ['copy:scripts']
     gulp.watch 'src/manifest.json',           ['copy:manifest']
 

@@ -1,0 +1,30 @@
+doctype html
+head
+    title Rally Copy Helper | Options
+    style.
+        select { width: 200px; margin: 15px auto; display: block; }
+body
+    section
+        h1 Options
+
+        h3 Font of content copied to clipboard
+
+        select#copy-custom-font-family
+            option none
+            option Segoe UI
+            option Verdana
+            option Calibri
+            option Arial
+            option Tahoma
+
+        select#copy-custom-font-size
+            option none
+            option 10pt
+            option 11pt
+            option 12pt
+            option 13pt
+    hr
+    center
+        button#save Save
+    
+    script(src='/scripts/options.js')
